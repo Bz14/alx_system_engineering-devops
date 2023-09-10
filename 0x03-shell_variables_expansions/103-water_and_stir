@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "obase=bestchol; $(echo "ibase=water; $WATER" ) + $(echo "ibase=stir; $STIR")
+echo "obase=bestchol; ibase=water; $WATER + ibase=stir; $STIR"
+
 
 
 
