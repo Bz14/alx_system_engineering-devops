@@ -1,6 +1,2 @@
 #!/bin/bash
-find . -type f,d \( -empty -o -name ".*" \) | cut -d ' ' -f9 | sed 's/^\.\///'
-
-
-
-
+find . -empty | rev | cut -d "/" -f 1 | rev
