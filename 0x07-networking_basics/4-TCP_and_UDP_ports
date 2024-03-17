@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This is a bash script that displays lists listining ports
+
+netstat -l --program
