@@ -3,5 +3,5 @@
 PRIVATE_KEY="school"
 PASSPHRASE="betty"
 BITS=4096
-PATH="$HOME/.ssh/$PRIVATE_KEY"
-ssh-keygen -t rsa -b $BITS -f $PATH -N $PASSPHRASE
+KEY_PATH="$HOME/.ssh/$PRIVATE_KEY"
+ssh-keygen -t rsa -b "$BITS" -f "$KEY_PATH" -N "$PASSPHRASE"
