@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy
+sudo apt-get update
+sudo apt-get install -y haproxy
+server_config=\
+"
+frontend eyerusalem_frontend
+        bind *:80
+        mode http
+        default_backend eyerusalem__backend
+backend eyerusalem_backend
+        balance roundrobin
+        server 524003-web-01 18.206.232.35:80 check
+        server 524003-web-02 54.85.25.20:80 check
+"
+echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
