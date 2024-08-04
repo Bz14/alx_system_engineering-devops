@@ -24,9 +24,9 @@ if __name__ == "__main__":
                     completed = task.get("completed")
                     title = task.get("title")
                     res.append({
+                        "username": username,
                         "task": title,
-                        "completed": completed,
-                        "username": username
+                        "completed": completed
                     })
                 json_data[id] = res
                 file = "todo_all_employees.json"
