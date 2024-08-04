@@ -16,12 +16,11 @@ if __name__ == "__main__":
         response = requests.get(url)
         if response.status_code == 200:
             todos = response.json()
-            file_name = "{}.csv".format(id)
-            with open(file_name, mode="w", newline='', encoding='utf-8') as file:
-                csv_writer = csv.writer(file)
+            file = "{}.csv".format(id)
+            with open(file, mode="w", newline='', encoding='utf-8') as f:
+                csv_writer = csv.writer(f, quoting=csv.QUOTE_ALL)
                 for task in todos:
                     username = data.get("username")
                     completed = task.get("completed")
                     title = task.get("title")
                     csv_writer.writerow([id, username, completed, title])
-                
