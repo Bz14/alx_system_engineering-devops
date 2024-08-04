@@ -16,7 +16,7 @@ if __name__ == "__main__":
         response = requests.get(url)
         if response.status_code == 200:
             todos = response.json()
-            json_data = []
+            json_data = {}
             res = []
             for task in todos:
                 completed = task.get("completed")
@@ -26,9 +26,7 @@ if __name__ == "__main__":
                         "completed": completed,
                         "username": username
                 })
-            json_data.append({
-                id: res
-            })
+            json_data[id] = res
             file = "{}.json".format(id)
             with open(file, mode="w", encoding='utf-8') as f:
                 json.dump(json_data, f)
