@@ -13,7 +13,6 @@
 
 - **14:15**: The issue was detected by our monitoring system, which triggered a high number of failed requests and increased latency alerts.
   
-![Monitoring Dashboard Screenshot](https://grafana.com/static/img/docs/grafana/latest/visualizations/graph-panel/graph-panel.png)
 
 - **14:18**: On-call engineer received an alert and began investigating the API gateway logs to identify the root cause.
 - **14:25**: The engineer initially assumed a potential network outage and began testing network connectivity between the API gateway and backend services.
@@ -21,14 +20,12 @@
 - **14:45**: The issue was escalated to the DevOps team to verify the Nginx configuration and identify any misconfigurations.
 - **15:05**: The DevOps team identified that the load-balancing rules were missing from the Nginx configuration file after the recent update.
 
-![Nginx Configuration Snippet](https://www.nginx.com/wp-content/uploads/2017/04/NGINX_Server_Block.png)
 
 - **15:20**: A temporary rollback of the Nginx configuration was initiated to restore service, but it failed due to missing backups of the previous configuration.
 - **15:45**: The team manually restored the correct load-balancing rules and restarted the Nginx service.
 - **16:00**: API services began recovering, with normal operations fully restored by 16:30 UTC.
 - **16:45**: A post-recovery analysis was conducted to ensure no further issues were present.
 
-![Timeline of Events](https://www.mockplus.com/web/2022/02/25/6218607ddad65e7c1a3d8c65.jpg)
 
 ## Root Cause and Resolution
 
@@ -52,6 +49,5 @@ To resolve the issue, the team identified the missing configuration and manually
 4. **Conduct team training**: Provide training for engineers on the importance of configuration management and the potential impacts of misconfigurations.
 5. **Review and test rollback procedures**: Regularly test rollback procedures to ensure they can be executed quickly and effectively in the event of an outage.
 
-![Flowchart of Incident Response](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HsDazmT2HXNHDuU23hRt-w.png)
 
 This postmortem highlights the critical need for stringent configuration management and robust monitoring to prevent future outages and ensure the stability of our services.
