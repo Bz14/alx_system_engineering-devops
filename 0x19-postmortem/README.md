@@ -48,6 +48,3 @@ To resolve the issue, the team identified the missing configuration and manually
 3. **Establish backup protocols**: Ensure that a backup of the configuration is automatically created before any updates are applied.
 4. **Conduct team training**: Provide training for engineers on the importance of configuration management and the potential impacts of misconfigurations.
 5. **Review and test rollback procedures**: Regularly test rollback procedures to ensure they can be executed quickly and effectively in the event of an outage.
-
-
-This postmortem highlights the critical need for stringent configuration management and robust monitoring to prevent future outages and ensure the stability of our services.
