@@ -7,7 +7,7 @@
 - **Impact**: During the outage, our API gateway experienced significant downtime, leading to the disruption of all API requests for approximately 75% of our users. This affected the ability of users to access essential services such as user authentication, payment processing, and data retrieval.
 - **Root Cause**: The root cause of the outage was a misconfigured Nginx server update that inadvertently removed critical load-balancing rules, causing requests to fail to reach backend services.
 
-![System Architecture Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/RESTful_Web_API_Architecture.png/800px-RESTful_Web_API_Architecture.png)
+![System Architecture Diagram](https://www.researchgate.net/profile/Sumeet-Kaur-2/publication/344386507/figure/fig1/AS:939722667835402@1601020877018/RESTful-web-service-architecture.png)
 
 ## Timeline
 
