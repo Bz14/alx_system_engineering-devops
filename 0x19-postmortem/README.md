@@ -1,6 +1,4 @@
-Here's your postmortem report with the images incorporated directly into the relevant sections:
 
-```markdown
 # Postmortem Report: API Gateway Outage
 
 ## Issue Summary
@@ -57,6 +55,3 @@ To resolve the issue, the team identified the missing configuration and manually
 ![Flowchart of Incident Response](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HsDazmT2HXNHDuU23hRt-w.png)
 
 This postmortem highlights the critical need for stringent configuration management and robust monitoring to prevent future outages and ensure the stability of our services.
-```
-
-This version includes the images in the relevant sections to support and visually illustrate the content.
